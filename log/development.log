@@ -1,0 +1,91 @@
+  [1m[35m (4.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `contactbook_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `contactbook_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `contactbook_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('4028351601647905140', 0)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateContacts (20180925064552)
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE `contacts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `address` varchar(255), `city` varchar(255), `phone` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180925064552_create_contacts.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180925064552')[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-09-25 06:48:06', '2018-09-25 06:48:06')[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('4028351601647905140')[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/contacts" for 14.143.245.10 at 2018-09-25 06:49:34 +0000
+Cannot render console from 14.143.245.10! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT `contacts`.* FROM `contacts`[0m
+  ↳ app/views/contacts/index.html.erb:18
+  Rendered contacts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 541ms (Views: 531.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contacts/new" for 14.143.245.10 at 2018-09-25 06:49:37 +0000
+Cannot render console from 14.143.245.10! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (28.3ms)
+  Rendered contacts/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 52ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/contacts" for 14.143.245.10 at 2018-09-25 06:50:00 +0000
+Cannot render console from 14.143.245.10! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRD4uVzAz7M9zyLNjS1GDONxU67RYU0OtCfXlw6oP++sBHvT7WZ4EC24A5pMRKzceP6lhFe1nrlUXjrLLXO/rg==", "contact"=>{"name"=>"devendra pal", "address"=>"abc@gmail.com", "city"=>"Bnagalore", "phone"=>"8105592464", "email"=>"aaa"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[36mContact Create (0.2ms)[0m  [1m[32mINSERT INTO `contacts` (`name`, `address`, `city`, `phone`, `email`, `created_at`, `updated_at`) VALUES ('devendra pal', 'abc@gmail.com', 'Bnagalore', '8105592464', 'aaa', '2018-09-25 06:50:00', '2018-09-25 06:50:00')[0m
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:30
+Redirected to http://54.172.141.47:3000/contacts/1
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/contacts/1" for 14.143.245.10 at 2018-09-25 06:50:01 +0000
+Cannot render console from 14.143.245.10! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  `contacts`.* FROM `contacts` WHERE `contacts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/contacts_controller.rb:67
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
